@@ -1,0 +1,120 @@
+
+# Diabetes Prediction Model
+
+## Abstract
+
+This project focuses on developing a machine learning model to predict diabetes based on health parameters. Using a dataset containing 768 entries with nine features, I implemented a Support Vector Machine (SVM) classifier to achieve an effective predictive system. The model demonstrated high accuracy during training and testing and can be used to classify individuals as diabetic or non-diabetic based on their health metrics.
+
+---
+
+## Introduction
+
+Diabetes is a chronic condition that affects millions worldwide. Early detection is crucial to managing and reducing health risks. Machine learning models can assist in predicting diabetes by analyzing various health parameters. This project aims to design a predictive system using SVM, leveraging a publicly available dataset to train and evaluate the model.
+
+---
+
+## Dataset Details
+
+The dataset used for this project has the following characteristics:
+
+- **Source**: [Pima Indians Diabetes Dataset]
+- **Size**: 768 rows and 9 columns
+- **Features**:
+  - Pregnancies
+  - Glucose
+  - Blood Pressure
+  - Skin Thickness
+  - Insulin
+  - BMI
+  - Diabetes Pedigree Function
+  - Age
+- **Target Variable**: Outcome (0: Non-Diabetic, 1: Diabetic)
+
+---
+
+## Methodology
+
+### Data Preprocessing
+
+1. **Loading the Dataset**: Imported the dataset using pandas.
+2. **Standardization**: Applied the `StandardScaler` to normalize the features.
+3. **Splitting the Data**: Divided into training (80%) and testing (20%) sets using `train_test_split` with stratification.
+
+### Model Training
+
+1. **Algorithm**: Support Vector Machine with a linear kernel was chosen.
+2. **Training**: The model was trained on the standardized training data.
+
+### Model Evaluation
+
+1. **Metrics**: Accuracy was calculated for both training and testing sets.
+2. **Results**:
+   - Training Accuracy: 78.92%
+   - Testing Accuracy: 77.92%
+
+### Predictive System
+
+1. The system accepts user inputs as health parameters.
+2. Standardizes the inputs using the trained scaler.
+3. Predicts the outcome (diabetic or non-diabetic).
+
+### Model Saving
+
+1. The trained SVM model was saved as `trained_model.sav` using the `pickle` module for future use.
+
+---
+
+## Results
+
+- **Training Accuracy**: 78.92%
+- **Testing Accuracy**: 77.92%
+- The model demonstrates reliable performance for early-stage diabetes prediction.
+
+---
+
+## Predictive System
+
+The predictive system allows users to input health metrics and returns a classification:
+
+1. **Input Example**:
+   - Pregnancies: 2
+   - Glucose: 112
+   - Blood Pressure: 66
+   - Skin Thickness: 22
+   - Insulin: 0
+   - BMI: 25
+   - Diabetes Pedigree Function: 0.307
+   - Age: 24
+2. **Prediction**: The person is diabetic/non-diabetic.
+
+Additionally, I developed a Streamlit-based web application for this project. This interface allows users to:
+- Enter health metrics interactively.
+- Submit the values to get instant results about whether they are diabetic or not.
+
+The Streamlit application simplifies user interaction and demonstrates the practical deployment of the predictive model. The main features include:
+- A clean user interface to input health parameters.
+- A predictive result displayed instantly after submission.
+
+---
+
+## Conclusion
+
+This diabetes prediction model successfully demonstrates the use of machine learning for healthcare applications. The SVM classifier showed good accuracy and can be enhanced further by:
+
+- Increasing dataset size
+- Using advanced feature engineering techniques
+
+The Streamlit interface showcases the practical implementation of this model, making it user-friendly and accessible for non-technical users.
+
+---
+
+## References
+
+1. Python Libraries: pandas, numpy, scikit-learn, matplotlib, pickle, streamlit
+2. Dataset Source: [Pima Indians Diabetes Dataset]
+
+---
+
+**Prepared by:** Saran B ( 2205102 )  
+3rd B.Sc. Computer Science  
+Government Arts College (Autonomous), Karur, India
