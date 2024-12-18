@@ -2,10 +2,14 @@ import numpy as np
 import pickle
 import streamlit as st
 from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
+from sklearn import svm
+from sklearn.metrics import accuracy_score
+from matplotlib import pyplot as plt
 
 # loading the saved model
 loaded_model = pickle.load(open("trained_model.sav", 'rb'))
-Stool = StandardScaler()
+Stool = pickle.load(open('scaler.pkl', 'rb'))
 
 #tuning
 def t1():
@@ -63,14 +67,14 @@ def main():
     # getting the input data from the user
     
     
-    Pregnancies = st.text_input('Number of Pregnancies')
-    Glucose = st.text_input('Glucose Level')
-    BloodPressure = st.text_input('Blood Pressure value')
-    SkinThickness = st.text_input('Skin Thickness value')
-    Insulin = st.text_input('Insulin Level')
-    BMI = st.text_input('BMI value')
-    DiabetesPedigreeFunction = st.text_input('Diabetes Pedigree Function value')
-    Age = st.text_input('Age of the Person')
+Pregnancies = float(st.text_input('Number of Pregnancies', '0'))
+Glucose = float(st.text_input('Glucose Level', '0'))
+BloodPressure = float(st.text_input('Blood Pressure value', '0'))
+SkinThickness = float(st.text_input('Skin Thickness value', '0'))
+Insulin = float(st.text_input('Insulin Level', '0'))
+BMI = float(st.text_input('BMI value', '0'))
+DiabetesPedigreeFunction = float(st.text_input('Diabetes Pedigree Function value', '0'))
+Age = float(st.text_input('Age of the Person', '0'))
     
     
     # code for Prediction
