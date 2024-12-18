@@ -67,15 +67,15 @@ def main():
     # getting the input data from the user
     
     
-Pregnancies = float(st.text_input('Number of Pregnancies', '0'))
-Glucose = float(st.text_input('Glucose Level', '0'))
-BloodPressure = float(st.text_input('Blood Pressure value', '0'))
-SkinThickness = float(st.text_input('Skin Thickness value', '0'))
-Insulin = float(st.text_input('Insulin Level', '0'))
-BMI = float(st.text_input('BMI value', '0'))
-DiabetesPedigreeFunction = float(st.text_input('Diabetes Pedigree Function value', '0'))
-Age = float(st.text_input('Age of the Person', '0'))
-    
+    Pregnancies = float(st.text_input('Number of Pregnancies', '0'))
+    Glucose = float(st.text_input('Glucose Level', '0'))
+    BloodPressure = float(st.text_input('Blood Pressure value', '0'))
+    SkinThickness = float(st.text_input('Skin Thickness value', '0'))
+    Insulin = float(st.text_input('Insulin Level', '0'))
+    BMI = float(st.text_input('BMI value', '0'))
+    DiabetesPedigreeFunction = float(st.text_input('Diabetes Pedigree Function value', '0'))
+    Age = float(st.text_input('Age of the Person', '0'))
+        
     
     # code for Prediction
     diagnosis = ''
