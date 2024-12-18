@@ -79,11 +79,11 @@ def main():
     
     # code for Prediction
     diagnosis = ''
-    
+    diagnoasis =''
     # creating a button for Prediction
     
     if st.button('Diabetes Test Result'):
-        diagnosis = diabetes_prediction([Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age])
+        diagnoasis = diabetes_prediction([Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age])
         
     t3(Glucose, SkinThickness, Insulin, BMI, Age)    
     st.success(diagnosis)
