@@ -16,7 +16,7 @@ def t1():
     diagnosis =" The person is not diabetic "
 def t2():
     diagnosis =" The person is diabetic "
-def t3():
+def t3(Glucose, SkinThickness, Insulin, BMI, Age):
     if ( Glucose < 120) :
         t1()
     elif ( SkinThickness < 20 ) :
@@ -85,12 +85,12 @@ def main():
     if st.button('Diabetes Test Result'):
         diagnosis = diabetes_prediction([Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age])
         
-    t3()    
+    t3(Glucose, SkinThickness, Insulin, BMI, Age)    
     st.success(diagnosis)
     
     
     
   
     
-if __name__ == '__main__':
-    main()
+#if __name__ == '__main__':
+#    main()
