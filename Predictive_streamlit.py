@@ -6,6 +6,24 @@ import streamlit as st
 # loading the saved model
 loaded_model = pickle.load(open("trained_model.sav", 'rb'))
 
+#tuning
+def t1():
+    diagnosis =" The person is not diabetic "
+def t2():
+    diagnosis =" The person is diabetic "
+def t3():
+    if ( Glucose < 120) :
+        t1()
+    elif ( SkinThickness < 20 ) :
+        t1()
+    elif ( Insulin < 75 ) :
+        t1()
+    elif ( BMI < 32 ) :
+        t1()
+    elif ( Age < 35 ) :
+        t1()
+    else :
+        t2()
 
 # creating a function for Prediction
 
@@ -61,12 +79,12 @@ def main():
     if st.button('Diabetes Test Result'):
         diagnosis = diabetes_prediction([Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age])
         
-        
+    t3()    
     st.success(diagnosis)
     
     
     
-    
+  
     
 if __name__ == '__main__':
     main()
